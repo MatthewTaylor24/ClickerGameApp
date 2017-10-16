@@ -7,7 +7,11 @@ Additional Details will be written here as the application becomes more and more
 
 
 Version 0.001 (10/16/2017)
+
 -Project Begun
+
 -Main Window Created
+
 -Button to add score to userScore added
+
 -Text to display userScore added
