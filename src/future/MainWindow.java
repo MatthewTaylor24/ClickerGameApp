@@ -27,6 +27,7 @@ public class MainWindow  {
 	private Text textUserScore;
 	private Text textWorkerCount;
 	private Text textWorkerScorePerSecond;
+	private Text userLevel;
 	
 	
 
@@ -121,6 +122,11 @@ public class MainWindow  {
 		textWorkerCount.setText("0");
 		textWorkerCount.setBounds(446, 52, 107, 21);
 		
+		// User's Level
+		userLevel = new Text(shell, SWT.BORDER);
+		userLevel.setText("1");
+		userLevel.setBounds(98, 34, 140, 21);
+		
 		
 		
 		// LABELS
@@ -139,6 +145,13 @@ public class MainWindow  {
 		Label lblScorePerSecond = new Label(shell, SWT.NONE);
 		lblScorePerSecond.setBounds(314, 82, 107, 15);
 		lblScorePerSecond.setText("Score Per Second:");
+		
+		// Label for User's Level
+		Label lblUserLevel = new Label(shell, SWT.NONE);
+		lblUserLevel.setBounds(10, 36, 55, 15);
+		lblUserLevel.setText("User Level:");
+		
+		
 		
 		
 		
@@ -216,6 +229,8 @@ public class MainWindow  {
 		btnPurchaseWorker.setBounds(304, 26, 249, 25);
 		btnPurchaseWorker.setText("Purchase Worker -- Cost: " + workerCost);
 		
+		
+		// Upgrade the Worker's Score Per Second Power
 		Button btnUpgradeWorkerStrength = new Button(shell, SWT.NONE);
 		btnUpgradeWorkerStrength.addMouseListener(new MouseAdapter() {
 			@Override
@@ -238,6 +253,16 @@ public class MainWindow  {
 		});
 		btnUpgradeWorkerStrength.setBounds(10, 268, 228, 25);
 		btnUpgradeWorkerStrength.setText("Upgrade Worker Strength -- Cost: " + workerStrengthCost);
+		
+		
+		
+		// Progress Bar -- Does nothing (WIP) but will show percentage of experience points for level
+		ProgressBar experiencePoints = new ProgressBar(shell, SWT.NONE);
+		experiencePoints.setBounds(10, 67, 228, 17);
+		
+		
+		
+		
 		
 		
 		
